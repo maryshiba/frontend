@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF_Login.Pages.ClientePage"
+             BackgroundImage="logo.jpg">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="5" Spacing="10">
+            <BoxView HeightRequest="10"/>
+            <Frame BackgroundColor="#bdbdbd" HasShadow="False">
+                <StackLayout Orientation="Vertical" Spacing="5">
+                    <Entry x:Name="CPF" Text="{Binding Cpf}" Placeholder="CPF" 
+                           PlaceholderColor="White" HeightRequest="40" 
+                           Keyboard="Numeric"
+                           TextColor="White"/>
+                    <Entry x:Name="Nome" Text="{Binding Nome}" Placeholder="Nome" 
+                           PlaceholderColor="White" HeightRequest="40" 
+                           Keyboard="Text"
+                           TextColor="White"/>
+                    <Entry x:Name="Email" Text="{Binding Email}" Placeholder="Email" 
+                           PlaceholderColor="White" HeightRequest="40" 
+                           Keyboard="Text"
+                           TextColor="White"/>
+                    <Entry x:Name="Senha" Text="{Binding Senha}" Placeholder="Senha" 
+                           PlaceholderColor="White" HeightRequest="40" 
+                           IsPassword="True"
+                           TextColor="White"/>
+                </StackLayout>
+            </Frame>
+            <Button Command="{Binding SubmitCommand}" Text="Salvar" TextColor="White"
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#00ace6" />
+            <Button Command="{Binding ConsultCommand}" Text="Consultar" TextColor="White"
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#00ace6" />
+            <Button Command="{Binding NewCommand}" Text="Novo" TextColor="White"
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#00ace6" />
+            <Button Command="{Binding DeleteCommand}" Text="Excluir" TextColor="White"
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#00ace6" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
